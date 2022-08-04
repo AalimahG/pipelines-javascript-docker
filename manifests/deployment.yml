@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: aalimahgpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aalimahgpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: aalimahgpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: aalimahgpipelinesjavascriptdocker 
+          image: cnohub.azurecr.io/aalimahgpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
